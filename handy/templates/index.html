@@ -1,0 +1,326 @@
+{% load static %}
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="static/icon.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      *{
+        font-family: Roboto Slab;
+      }
+      .body{
+        margin-top: 40vh;
+        height: 50vh;
+      }
+      .navbar{
+        height: 5rem;
+      }
+       .nav-link, .font{
+        font-size: 1.3rem;
+
+      }
+      .navbar-brand{
+        font-size: 1.6rem;
+      }
+      .h1{
+       font-size: 3rem;
+      }
+      .img-abt{
+        height: 100%;
+        width: 87%;
+      }
+      .abt-div{
+        width: 50%;
+      }
+      body{
+        background-image:linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.1 )),url('static/home1.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+        animation-name: home;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+      }
+      .abt{
+        background: rgb(14,25,29);
+        background: linear-gradient(90deg, rgb(0, 0, 0) 100%, rgba(14,51,51,1) 100%);
+        animation-name: abt;
+        animation-duration: 4s;
+      }
+      @keyframes home {
+        from  {background-image:linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.1 )), url('static/home1.jpg');}
+        to {background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.3 )), url('static/home2.jpg');}
+      }
+      /*@keyframes abt {
+        from  {background: linear-gradient(90deg, rgba(9,86,87,1) 54%, rgba(32,96,67,1) 78%);}
+        to {background: linear-gradient(90deg, rgba(32,96,67,1) 26%, rgba(9,86,87,1) 49%);}
+
+      }*/
+      .img-team{
+        height: 50%;
+        width: 80%;
+        padding-left: 3rem;
+      }
+      .who{
+        font-size: 1.3rem;
+      }
+      .mt{
+        padding-top: 8%;
+      }
+      .footink:hover{
+        color: aquamarine;
+      }
+      .glimpse{
+        font-size: 1.4rem;
+      }
+      .icons{
+        font-size: 1.8rem;
+      }
+
+      @media all and (max-width: 500px){
+        .navbar-brand, .nav-link, .font{
+          font-size: 1.2rem;
+        }
+        .navbar{
+          height: 4rem;
+        }
+        .body{
+          margin-top: 30vh;
+          height: 70vh;
+
+        }
+        .h1, .ph{
+          font-size: 2rem;
+        }
+        .abt-div{
+          width: 100%;
+        }
+        .img-abt{
+          height: 0%;
+          width: 0%;
+        }
+        .who{
+          font-size: 1rem;
+        }
+        .glimpse{
+          font-size: 1rem;
+        }
+      }
+
+      /* team css
+      */
+      /*
+      */
+
+      */
+    </style>
+  </head>
+  <body>
+  <!--nav-->
+  <nav class="navbar navbar-expand-lg  sticky-top" style="background-color:#080808;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><span style="font-family: Pacifico; font-size: 1.6rem;">E </span>com <span style="font-family: Pacifico; font-size: 1.6rem;">H </span>andy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feature">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-4 font" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--end nav-->
+
+    <!--Home-->
+    <section id="home" class="home-css">
+      <div class="container-fluid position-relative body text-center">
+        <h1 class="h1">Welcome to <span class="fw-bolder">Ecom Handy</span></h1>
+        <p class="fs-1 ph">A <span class="vals" style="color: rgb(17, 232, 81);"></span> at the palm of your hands</p>
+    </div>
+    </section>
+    <!--End home-->
+
+    <!--about-->
+    <section id="feature" class="bg-black feat p-4">
+      <div class="head text-center">
+        <h1>About</h1>
+      </div>
+
+      <div class="container-fluid position-relative w-75 rw-about">
+        <div class="mb-3">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="static/ecomlogo.JPG" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body text-center mt">
+                <h2 class="card-title fs-1">Who are we ?</h2>
+                <p class="card-text who">Coming with a new style, a new look a new feel and all you could ever think of in a new era.<br><br>
+                   We bring you the best of the best services and goods you could ever think of, from custom moving packages to groceries at your doorstep. Ecom Handy allows you to connect with us in a different way unique from all other similar organizations.
+                  <br><br>
+                  Revolutionizing your shoping experience, we give you a user intuitive and friendly interface allowing even the aged to make payments, navigate and shop to their needs.
+                </p>
+              </div>
+              <div class="text-center">
+              <div class="row mt-5">
+                <p class="fs-3">Made with love by</p>
+                <div class="col-lg-5 col-md-6 footer-links">
+                  <h4>Guav Ghardammez</h4>
+                  <ul style="list-style-type: none;" class= "icons">
+                    <a href="https://www.linkedin.com/in/guav-gharddammez-a25a29278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://x.com/GuavGharddammez?t=K7cBwvquRP69bm0OiuFtZw&s=09" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://github.com/Gharddammez" class="github"><i class='bx bxl-github'></i></a>
+                  </ul>
+                </div>
+                <div class="col-lg-5 col-md-6 footer-links">
+                  <h4>Ephesians Lewis</h4>
+                  <ul style="list-style-type: none;" class="icons">
+                    <a href="https://www.linkedin.com/in/ephesians-ochieng-okoth-a14955262/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                    <a href="https://x.com/_cooder" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="https://github.com/quiesscent" class="github"><i class='bx bxl-github'></i></a>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <a href="https://github.com/Gharddammez/ecomhandy.git" style="text-decoration: none;">Our Project</a>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end about-->
+
+    <!--feature-->
+    <section id="about" class="abt">
+      <div class="head text-center p-5">
+        <h1>A glimpse of us</h1>
+      </div>
+      <div class="container-fluid position-relative abt-div">
+        <div class="mb-5">
+          <div class="row g-0">
+            <div class="col-md-6">
+              <img src="static/greens.jpg" class="img-fluid rounded-start img-abt" alt="...">
+            </div>
+            <div class="col-md-5">
+              <div class="card-body glimpse">
+                <h2 class="card-title">Greens and Vegies</h2><br>
+                <p class="card-text">Get a taste of our finest greens and vegetables from our farms and our trusted supplies from all over the country</p>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="row g-0">
+          <div class="col-md-6 glimpse">
+            <h2 class="card-title">In Door Deliveries</h2><br>
+            <p class="card-text">Saving your the fuzz of going to the market place or comming to us, meet our trusted drivers who give you the best, fast and safe deliveries at your doorstep</p>
+          </div>
+          <div class="col-md-6">
+            <div class="card-body">
+              <img src="static/deliver.jpg" class="img-fluid rounded-start img-abt" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="">
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img src="static/cuisines.jpg" class="img-fluid rounded-start img-abt" alt="...">
+          </div>
+          <div class="col-md-5">
+            <div class="card-body glimpse">
+              <h2 class="card-title">Cuisines</h2> <br>
+              <p class="card-text">Especially designed for introverts, no more going out, we allow you eat while hot from our restaurants, with a special packing system designed to keep your food hot. We allow you save time and energy of cooking. Say no to masive cooking. We got you</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+    </section>
+    <!--End feature-->
+    <section id="contact">
+      <div class="container-fluid position-relative text-center">
+
+
+      </div>
+    </section>
+    <footer class="bg-black p-5">
+      <div class="text-center">
+      <div class="row">
+        <div class="col-lg-4  col-md-6">
+          <div class="footer-info">
+            <h3>Ecom Handy</h3>
+            <p>All you desire in one place</p>
+            <div class="social-links mt-3 fs-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul style="list-style-type: none;">
+            <li><i class="bx bx-chevron-right"></i> <a >Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul style="list-style-type: none;">
+            <li><i class="bx bx-chevron-right"></i> <a >Deliveries</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Cuisines</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Groceries</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a >Marketing</a></li>
+          </ul>
+        </div>
+
+      </div>
+      &copy;ecomhandy 2024 ||  designed by <a class="footlink">guavytechsolutions</a>
+      </div>
+    </footer>
+    <!--Contact-->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--End Contact-->
+    <script>
+      var typed = new Typed(".vals", {
+          strings: ['', 'Restaurant', 'Hardware Store', 'Grocery Shop '],
+          typeSpeed: 100,
+          backSpeed: 100,
+          loop: true
+      })
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
