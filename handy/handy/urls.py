@@ -21,3 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('handyapp.urls'))
 ]
+
+admin.site.index_title = 'Ecom Handy Administration'
+admin.site.site_header = 'EcomHandy'
+admin.site.site_title = 'Ecommerce Handy'
