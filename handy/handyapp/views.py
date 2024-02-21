@@ -26,14 +26,14 @@ def contact(request):
     # check method request
     if request.method == "POST":
         # get the form data
-        username = request.POST.get('username')
-        subject = request.POST.get('subject')
-        email = request.POST.get('email')
-        number = request.POST.get('contact')
-        message = request.POST.get('message')
+        username = request.POST['username']
+        subject = request.POST['subject']
+        email = request.POST['email']
+        number = request.POST['number']
+        message = request.POST['message']
 
         # get the data into the database
-        reach = Contact(username=username, contact=number, email=email, subject=subject, message=message)
+        reach = Contact(email=email, username=username, contact=number, subject=subject, message=message)
         # save our data
         reach.save()
         # give message

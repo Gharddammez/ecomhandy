@@ -20,7 +20,7 @@ class Product(models.Model):
 class Contact(models.Model):
     email = models.CharField(max_length=105, default='', blank=False, null=False)
     username = models.CharField(max_length=100, default='', blank=False, null=False)
-    contact = models.IntegerField(default='', blank=False, null=False)
+    contact = models.CharField( max_length=15, default='', blank=False, null=False)
     subject = models.CharField(max_length=200, default='', blank=False, null=False)
     message = models.TextField(max_length=1000, default='', blank=False, null=False)
 
