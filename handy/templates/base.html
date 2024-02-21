@@ -23,7 +23,7 @@
         height: 5rem;
       }
        .nav-link, .font{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
 
       }
       .navbar-brand{
@@ -53,27 +53,24 @@
         animation-name: abt;
         animation-duration: 4s;
       }
+      /* animation to make the images change */
       @keyframes home {
         from  {background-image:linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.1 )), url('static/home1.jpg');}
         to {background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.3 )), url('static/home2.jpg');}
       }
-      /*@keyframes abt {
-        from  {background: linear-gradient(90deg, rgba(9,86,87,1) 54%, rgba(32,96,67,1) 78%);}
-        to {background: linear-gradient(90deg, rgba(32,96,67,1) 26%, rgba(9,86,87,1) 49%);}
 
-      }*/
       .img-team{
         height: 50%;
         width: 80%;
         padding-left: 3rem;
       }
       .who{
-        font-size: 1.3rem;
+        font-size: 1rem;
       }
       .mt{
         padding-top: 8%;
       }
-      .footink:hover{
+      .footlink:hover{
         color: aquamarine;
       }
       .glimpse{
@@ -82,7 +79,7 @@
       .icons{
         font-size: 1.8rem;
       }
-
+      /* make the pages items responsive*/
       @media all and (max-width: 500px){
         .navbar-brand, .nav-link, .font{
           font-size: 1.2rem;
@@ -113,12 +110,6 @@
         }
       }
 
-      /* team css
-      */
-      /*
-      */
-
-      */
     </style>
   </head>
   <body>
@@ -147,7 +138,7 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-4 font" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-4 font bg-transparent" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
@@ -155,7 +146,10 @@
   </nav>
   <!--end nav-->
      <!-- body  -->
-  {%block content%} {%endblock content%}
+  {%block content%}
+
+    {%endblock content%}
+
     <!-- body end -->
 
      <!-- footer -->

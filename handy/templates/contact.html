@@ -1,7 +1,71 @@
 {%extends 'base.html'%}
 
 {% block content%}
+<style>
+    /*set the contact page image*/
 
+    .cont{
+        background-image:linear-gradient(rgba(0,0,0, 1), rgba(0,0,0, 0.6 )),url('static/home1.jpg');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<div class="container-fluid w-100 h-100 bg-black cont">
+<div class="container">
+    <div class="">
+        <h3 class="fw-bold">
+            Contact
+        </h3>
+    </div>
+    <div class="container">
+        <p>Contact us through our 24hr hotlines and emails, or communicate with our great staff who will be able to help you with any need that you may have.</p>
+    </div>
+    <div class="row row-cols-1 mb-3">
+        <div class="row ">
+            <div class="border rounded border-black" style="background-color: black;">
+                <form class="row g-3" method="POST">
+                  <div class="col-md-6">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control bg-transparent" id="inputEmail4" name="email" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="inputUsername" class="form-label">Name</label>
+                    <input type="text" class="form-control bg-transparent" id="inputUsername" name="username" required>
+                  </div>
 
+                  <div class="col-md-6">
+                    <label for="inputSubject" class="form-label">Subject</label>
+                    <input type="text" class="form-control bg-transparent" id="inputSubject" name="subject" required>
+                  </div>
+                    <div class="col-md-6">
+                    <label for="inputNumber" class="form-label">Contact</label>
+                    <input type="number" class="form-control bg-transparent" id="inputNumber" name="number" required>
+                   </div>
 
+                  <div class="col-md-12">
+                    <label for="inputMessage" class="form-label">Message</label>
+                      <textarea  class="form-control bg-transparent" id="inputMessage" rows="5" name="message" required></textarea>
+                  </div>
+
+                  <div class="col-12 text-center mb-3">
+                    <button type="submit" class="btn btn-outline-light w-25">Send</button>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-lg-5 col-md-5">
+            Tel: 0712356887
+        </div>
+        <div class="col-lg-5 col-md-5">
+            Email: ecomhandy@gmail.com
+        </div>
+        <div class="col-lg-2 col-md-5">
+            Location: World
+        </div>
+    </div>
+
+</div>
+</div>
 {%endblock content%}
