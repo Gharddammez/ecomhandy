@@ -15,12 +15,6 @@ def about(request):
     return render(request, 'about.html')
 
 
-def products(request):
-    # get products from the database
-
-    return render(request, 'products.html')
-
-
 @csrf_exempt
 def contact(request):
     # check method request
