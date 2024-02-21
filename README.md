@@ -21,7 +21,7 @@ Planning to make the mobile application as we continue to grow. We ought to give
 
 ## Contributing and Related Projects
 
-We have no contrubutors on our project apart from the two members. Nevertheless all are welcomed to contribute for the greater good of the project
+We have no contributors on our project apart from the two members. Nevertheless all are welcomed to contribute for the greater good of the project
 
 On matters related projects we have, Jumia, Jiji, Amazon and many others offering the same services we offer but we ought deliver more efficiently compared to 95% of the platforms
 
