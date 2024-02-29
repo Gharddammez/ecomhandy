@@ -19,7 +19,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('handyapp.urls'))
+    path('', include('handyapp.urls')),
+    path('cart/', include('cart.urls'))
 ]
 
 admin.site.index_title = 'Ecom Handy Administration'

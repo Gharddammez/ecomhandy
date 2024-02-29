@@ -6,13 +6,23 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
-
     return render(request, 'index.html')
 
 
 def about(request):
-
     return render(request, 'about.html')
+
+
+def products(request):
+    prod_all = Product.objects.all()
+    # cat = Category.objects.all()
+    return render(request, 'products.html', {'product': prod_all})# , 'category': cat})
+
+
+def product(request, pk):
+    prod = Product.objects.get(id=pk)
+
+    return render(request, 'product.html', {'product': prod})
 
 
 @csrf_exempt

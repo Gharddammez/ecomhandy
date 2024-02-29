@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+{%block title%}~ Products{%endblock title%}
+{%block head%}
+            <h1 class="text-center text-light mb-2" id="header-tag">Products</h1>
+            <p class="text-center text-success mt-2 mb-2 text-white">Here are some of the few services we offer</p>
+{%endblock head%}
+{%block content%}
+
+        <div class="container mt-5">
+            <h2 class="border-bottom mb-3">Products</h2>
+            <div class="row row-cols-2 p-1">
+                {% for prod in product %}
+                {%if prod.is_sale%}
+                <div class="col-lg-4">
+                    <div class="container shadow border border-light mb-1 rounded" style="height:340px;">
+                        <img src="{{prod.image.url}}" class="img-fluid rounded pt-2 mx-auto d-block" style="height: 200px;">
+                        <h5 class="p-2 fw-bold text-center">{{prod.name}}</h5>
+                        <p class="text-center" style="font-size: 0.8rem;"><del class="text-secondary mx-2">Ksh.{{prod.price}}/=</del>Ksh.{{prod.sale_price}}/=</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-outline-secondary mb-2" href="{% url 'product' prod.id %}">View</a>
+                        </div>
+                    </div>
+                </div>
+                {%else%}
+                <div class="col-lg-3">
+                    <div class="container shadow border border-light mb-1 rounded" style="height:335px;">
+                        <img src="{{prod.image.url}}" class="img-fluid rounded pt-2 mx-auto d-block" style="height: 200px;">
+                        <h5 class="p-2 fw-bold text-center">{{prod.name}}</h5>
+                        <p class="text-center">Ksh.{{prod.price}}/=</p>
+                        <div class="d-flex justify-content-center">
+                            <p class="p-1"></p>
+                            <a class="btn btn-outline-secondary mb-2" href="{% url 'product' prod.id %}">View</a>
+                        </div>
+                    </div>
+                </div>
+                {%endif%}
+                {%endfor%}
+            </div>
+        </div>
+{%endblock content%}
+<!--            <ul class="nav justify-content-center text-black">-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link active btn btn-success" href="/products">All</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{% url 'sections' 'Grocer' %}" style="color:black;">Grocer</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{% url 'sections' 'Butcher' %}" style="color:black;">Butcher</a>-->
+<!--                  </li>-->
+<!--                  <li class="nav-item">-->
+<!--                    <a class="nav-link" href="{% url 'sections' 'Restaurant' %}" style="color:black;"> Restaurant</a>-->
+<!--                  </li>-->
+<!--                </ul>-->

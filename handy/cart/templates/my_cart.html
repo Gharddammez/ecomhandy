@@ -1,0 +1,79 @@
+{% extends 'base.html'%}
+{%block title%} ~ Cart{%endblock title%}
+{%block head%}
+<h1 class="text-center text-light mb-2" id="header-tag">My cart</h1>
+<p class="fs-4"> Here are your choices today</p>
+{%endblock head%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row row-cols-1 row-cols-md-1 g-1 mt-2 cart-vh">
+                {% if products %}
+                {% for product in products %}
+                <div class="col">
+                   <div class="card mb-3 text-center" style="max-width: 550px;">
+                    <div class="row g-0">
+                      <div class="col-md-5">
+                        <img src="{{product.image.url}}" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-7">
+                        <div class="card-body">
+                          <h5 class="card-title product-name">{{product.name}} </h5>
+                          <p class="card-text"></p>
+                          {%if product.is_sale%}
+                            <p class="card-text">Category {{product.category}}<br></p><p class="card-text product-sale">Ksh.{{product.sale_price}}/=</p>
+                          {%else%}
+                          <p class="card-text">Category {{product.category}}<br></p><p class="card-text product-not-sale">Ksh.{{product.price}}/=</p>
+                          {%endif%}
+                          <div class="row justify-items-center">
+                            <div class="col-md-5">
+                              <label class="col-form-label-lg">Quantity</label>
+                            </div>
+                            <div class="col-md-4">
+                                {%for key, value in quantities.items%}
+                                {%if key == product.id|slugify%}
+                                    <input type="number"  class=" form-control w-100 border border-success mb-3 mt-2 data" style="height: 2rem;" id="product{{product.id}}" value="{{value}}" name="quantity">
+                                {%endif%}
+                                {%endfor%}
+                            </div>
+                          </div>
+                            <div>
+                                <input type="hidden" value="{{product.id}}" class="product-id-update">
+                                <button type="button" data-index="{{product.id}}" class="btn btn-outline-success btn-sm  update-cart" style="width: 5rem;">Update</button>
+                                <button type="button" data-index="{{product.id}}" class="btn btn-outline-danger btn-sm delete-item" style="width: 5rem;" value="{{product.id}}" id="product-id-delete">Delete</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                    {%endfor%}
+                </div>
+        </div>
+        <div class="col-md-4 mt-3">
+            <div class="card w-100">
+              <div class="card-header fw-bolder fs-4 text-center">
+                Checkout
+              </div>
+              <div class="card-body">
+                  <form action="{%url 'orders'%}" method="POST">
+                      <div class="">
+                          <label for="floatingText">Total Goods Amount</label>
+                          <input type="text" class="form-control border border-success" id="floatingText" placeholder="Ksh." name="total" value="Ksh.{{totals}}.00/=" disabled>
+                          <input type="hidden" id="id_delivery" value="{{delivery}}">
+                      </div>
+                <p class="card-text"></p>
+                <button type="submit" class="btn btn-outline-success w-75" id="">Checkout</button>
+                  </form>
+              </div>
+            </div>
+        </div>
+        {%else%}
+        <div class="text-center">
+            <p class="fs-3 fw-bolder vh">Cart Empty</p>
+        </div>
+        {%endif%}
+        </div>
+ </div>
+{% endblock content%}
